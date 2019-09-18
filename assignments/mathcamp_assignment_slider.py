@@ -1,4 +1,4 @@
-# import numpy
+#visit https://mybinder.org/v2/gh/zsiegel92/mathcamp/master?filepath=assignments%2FMath%20Camp%20Assignment.ipynb
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Slider
 from numpy.random import normal as randn
