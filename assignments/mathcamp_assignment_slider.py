@@ -30,8 +30,8 @@ xvals = [min + x*(max-min)/n for x in range(n)]
 X = matrix([[1,x] for x in xvals])
 
 
-beta_slider = Slider(beta_slider_ax, 'slope', 0.1, 30.0, valinit=10, valstep=0.4)
-alpha_slider = Slider(alpha_slider_ax, 'intercept', -20, 20, valinit=5, valstep=0.4)
+beta_slider = Slider(beta_slider_ax, 'slope', -30, 30.0, valinit=10, valstep=1)
+alpha_slider = Slider(alpha_slider_ax, 'intercept', -4, 4, valinit=5, valstep=0.5)
 deviation_slider = Slider(deviation_slider_ax, 'error s', 0.4, 10, valinit=3, valstep=0.1)
 
 
@@ -63,6 +63,8 @@ def update(a,b,s):
 	plt.ylabel('y values')
 	plt.xlabel('x values')
 	plt.title('OLS Regression\n(slider generates errors with new parameters)\n(see console)')
+	ax.set_xlim(left=-0.1,right=1.1)
+	plt.ylim(-30,30)
 	plt.show()
 
 
